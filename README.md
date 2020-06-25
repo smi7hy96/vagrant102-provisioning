@@ -1,21 +1,49 @@
-# Vagrant Provision Class
+# Vagrant 102
 
-Today's LO:
-
+Learning objectives:
 - Provisioning
-- Set up working app
+- Setting up a working app
 
-### Sudo code infrastructure
+### Pseudo code
 
-- Create a machine and set up a working app in it.
-- It needs to bein a VM because it will be a standardized environment
+Ask for context from provider!!
+- Language?
+- Frameworks?
+- Tests?
+- Specific packages or versions?
+- Specific packages or versions that DON'T WORK?
+- Other info?
 
-What steps do I need to take?
+###### This context... ######
+I want to create a machine and set up a working app in it
+I want it in a VM because it will be a standardised environment
 
-The environment will be:
-- ubuntu/xenial64
-- need nodeJS
-- check how to install stuff in it
-- Need to be on port 80 - has to be manually set
-- Reverse proxy to get app talking n port 80
-- Need app in my vm so it can be installed and run successfully.
+
+
+	This envrionment will be:
+		- ubuntu/xenial64  <--- VirtualBox + Vagrant required
+		- NodeJS
+		- Port 80
+		- Reverse proxy for app to talk on port
+		- App needed within the VM
+	Pre-reqs
+		- Ruby
+		- Bundler
+		- VirtualBox / Vagrant
+
+
+# User Installation:
+
+
+1) Clone repo
+	- Provides you with a copy of provisioning-starter-code
+2) Open git bash / equivalent
+3) `$ cd starter-code`
+4) `$ vagrant up`
+	- Starts up VM server (will take some time)
+	- Check it is present / running in VirtualBox Manager
+	- `$ vagrant ssh` to enter (not necessity here)
+5) `$ cd environment/spec-tests`
+6) `$ rake spec`
+	- To initialise and perform set tests
+	- EXPECTED: 9 EXAMPLES, 0 FAILURES
