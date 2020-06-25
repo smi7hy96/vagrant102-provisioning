@@ -18,7 +18,7 @@ describe package('nodejs') do
 end
 
 describe command('nodejs --version') do
-  its(:stdout) { should match /v4./ }
+  its(:stdout) { should match /v6./ }
 end
 
 describe package('pm2') do
