@@ -9,5 +9,5 @@ Vagrant.configure("2") do |config|
   #HOW TO SEND CODE TO VM
   # config.vm.synced_folder("path_to_origin_to_sync", "path_in_machine_to_synced_folder")
   config.vm.synced_folder("app", "/app")
-  config.vm.provision "shell", path:"environment/provision_file.sh"
+  config.vm.provision "shell", path:"environment/provision_file.sh", privileged: false
 end
