@@ -47,6 +47,3 @@ I want it in a VM because it will be a standardised environment
 6) `$ rake spec`
 	- To initialise and perform set tests
 	- EXPECTED: 9 EXAMPLES, 0 FAILURES
-
-
-test
